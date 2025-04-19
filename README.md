@@ -1,4 +1,4 @@
-**Cessna Citation X**
+# Cessna Citation X
 ---
 A highly advanced simulation of the Cessna Citation X for the FlightGear flight simulator.
 ---

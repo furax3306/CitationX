@@ -4,12 +4,13 @@
 Cessna Citation X - Complete Version
 Started Oct 2005  Syd Adams
 Completed 2015-2021 C. Le Moigne (clm76), C-Thiriot (PATTEN).
+Additional changes 2025 vgaconnector
 ************************************************************************
 -->
 <PropertyList>
   <sim>
     <description>Cessna Citation X (Yasim)</description>
-    <author>Syd Adams (creator), C.Le Moigne (clm76), C.Thiriot (Patten), F-ORKI, Laurent (F5SLQ), Silveraire40 - Version 24/10/2023</author>
+    <author>Syd Adams (creator), C.Le Moigne (clm76), C.Thiriot (Patten), F-ORKI, Laurent (F5SLQ), Silveraire40, vgaconnector - Version 19/04/2025</author>
     <status>devel</status>
     <rating>
         <FDM type="int">4</FDM>

@@ -74,9 +74,9 @@ var NavMap = {
     APT_cit  : { enabled: 1, declutter: 3, range: 80, max_range: 80, static : 1, factory : canvas.SymbolLayer, priority : 4, vis :1},
     TFC  : { enabled: 1, declutter: 3, range: 160, max_range: 2000, static : 1, factory : canvas.SymbolLayer, priority : 4, vis :1},
     APS  : { enabled: 1, declutter: 3, range: 2000, max_range: 2000, static : 1,  factory : canvas.SymbolLayer, priority : 4, vis :1},
-    STAMEN_terrain  : { enabled: 1, declutter: 3, range: 500, max_range: 2000, static : 1, factory : canvas.OverlayLayer, priority : 1, vis :0},
-    OpenAIP : { enabled: 1, declutter: 1, range: 80, max_range: 150, static : 1, factory : canvas.OverlayLayer, priority : 1, vis :0},
-    STAMEN  : { enabled: 1, declutter: 3, range: 500, max_range: 2000, static : 1, factory : canvas.OverlayLayer, priority : 1, vis :0},
+    # STAMEN_terrain  : { enabled: 1, declutter: 3, range: 500, max_range: 2000, static : 1, factory : canvas.OverlayLayer, priority : 1, vis :0},
+    # OpenAIP : { enabled: 1, declutter: 1, range: 80, max_range: 150, static : 1, factory : canvas.OverlayLayer, priority : 1, vis :0},
+    # STAMEN  : { enabled: 1, declutter: 3, range: 500, max_range: 2000, static : 1, factory : canvas.OverlayLayer, priority : 1, vis :0},
   },
 
   new : func(x) {

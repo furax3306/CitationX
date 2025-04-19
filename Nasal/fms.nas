@@ -86,6 +86,10 @@ var tg_alt = "autopilot/settings/tg-alt-ft";
 var tg_climb = "autopilot/settings/target-climb-rate-fps";
 var tg_spd_kt = "autopilot/settings/target-speed-kt";
 var tg_spd_mc = "autopilot/settings/target-speed-mach";
+var mach_speed = getprop("/autopilot/settings/target-speed-mach");
+if (mach_speed == nil or mach_speed < 0.1) {
+    setprop("/autopilot/settings/target-speed-mach", 0.78);
+}
 var toga = "autopilot/locks/to-ga";
 var tot_dst = "autopilot/route-manager/total-distance";
 

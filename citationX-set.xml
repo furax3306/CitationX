@@ -315,6 +315,15 @@ Additional changes 2025 vgaconnector
 
     <menubar>
       <default>
+        <!--<menu n="9">
+          <item>
+            <label>Aircraft Checklists</label>
+            <enabled type="bool">true</enabled>
+            <binding>
+              <command>dialog-show</command>
+			        <dialog-name>checklists</dialog-name>
+			      </binding>
+			    </item>-->
         <menu n="10">
           <label>Citation X</label>
           <enabled type="bool">true</enabled>
@@ -366,7 +375,6 @@ Additional changes 2025 vgaconnector
               <property>controls/fire/engines-fire</property>
             </binding>
           </item>
-
         </menu>
      </default>
     </menubar>
@@ -447,6 +455,18 @@ Additional changes 2025 vgaconnector
       <tutorial include="Tutorials/roulage.xml"/>
       <tutorial include="Tutorials/decollage.xml"/>
   </tutorials>
+  <!--<checklists>
+      <checklist include="Checklists/before-engine-start-apu.xml"/>
+    	<checklist include="Checklists/before-engine-start-epu.xml"/>
+    	<checklist include="Checklists/after-engine-start.xml"/>
+    	<checklist include="Checklists/ready-for-taxi.xml"/>
+  	  <checklist include="Checklists/ready-for-takeoff.xml"/>
+  	  <checklist include="Checklists/after-takeoff.xml"/>
+  	  <checklist include="Checklists/cruise.xml"/>
+  	  <checklist include="Checklists/descent-and-approach.xml"/>
+  	  <checklist include="Checklists/after-landing-taxi.xml"/>
+  	  <checklist include="Checklists/shutdown.xml"/>
+  </checklists>-->
 
   <instrumentation>
 		<pfd>
@@ -675,9 +695,9 @@ Additional changes 2025 vgaconnector
       <charts>
         <file>Nasal/Charts/charts.nas</file>
       </charts>
-			<checklist>
+			<!--<checklist>
 				<file>Nasal/checklist.nas</file>
-			</checklist>
+			</checklist>-->
 			<cvr>
 				<file>Nasal/cvr.nas</file>
 			</cvr>

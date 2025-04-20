@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
+  
+  <!-- Taxi Light -->
+  
+  <property>
+    <name>sim/rendering/als-taxi-light</name>
+    <type>int</type>
+    <value>0</value>
+  </property>
 
+  <!-- Landing Light -->
+  
+  <property>
+    <name>sim/rendering/als-landing-light</name>
+    <type>int</type>
+    <value>0</value>
+  </property>
+
+  <!-- Logo Light -->
+  
+  <property>
+    <name>sim/rendering/als-logo-light</name>
+    <type>int</type>
+    <value>0</value>
+  </property>
+  
   <!-- Starting APU -->
 
   <flipflop>
@@ -204,7 +228,7 @@
 
   <!-- Set the ALS system to taxi and Landing lights-->
 
-    <!-- Landing light Left -->
+  <!-- Landing light Left -->
 
   <state-machine>
     <state><name>on</name></state>
@@ -214,33 +238,12 @@
       <source>off</source>
       <target>on</target>
       <condition>
-        <and>
-          <property>controls/lighting/landing-light</property>
-          <greater-than>
-            <property>systems/electrical/left-main-bus-volts</property>
-            <value>10</value>
-          </greater-than>
-        </and>
+        <property>controls/lighting/landing-light[0]</property> <!-- check switch on -->
       </condition>
       <binding>
         <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-landing-light</property>
-          <value>1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light1-offset-deg</property>
-        <value>-5</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light2-offset-deg</property>
-        <value>5</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light3-offset-deg</property>
-        <value>2</value>
+        <property>sim/rendering/als-landing-light</property>
+        <value>1</value>
       </binding>
     </transition>
     <transition>
@@ -248,175 +251,19 @@
       <source>on</source>
       <target>off</target>
       <condition>
-        <or>
-          <not>
-            <property>controls/lighting/landing-light</property>
-          </not>
-          <less-than>
-            <property>systems/electrical/left-main-bus-volts</property>
-            <value>11</value>
-          </less-than>
-        </or>
+        <not>
+          <property>controls/lighting/landing-light[0]</property> <!-- check switch off -->
+        </not>
       </condition>
       <binding>
         <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-landing-light</property>
-          <value>0</value>
-      </binding>
-    </transition>
-  </state-machine>
-
-    <!-- Landing light right -->
-
-  <state-machine>
-    <state><name>on</name></state>
-    <state><name>off</name></state>
-    <transition>
-      <name>auto-on</name>
-      <source>off</source>
-      <target>on</target>
-      <condition>
-        <and>
-          <property>controls/lighting/landing-light[1]</property>
-          <greater-than>
-            <property>systems/electrical/right-main-bus-volts</property>
-            <value>10</value>
-          </greater-than>
-        </and>
-      </condition>
-      <binding>
-        <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
-          <value>1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light1-offset-deg</property>
-        <value>0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light2-offset-deg</property>
-        <value>5</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light3-offset-deg</property>
-        <value>2</value>
-      </binding>
-    </transition>
-    <transition>
-      <name>auto-off</name>
-      <source>on</source>
-      <target>off</target>
-      <condition>
-        <or>
-          <not>
-            <property>controls/lighting/landing-light[1]</property>
-          </not>
-          <less-than>
-            <property>systems/electrical/right-main-bus-volts</property>
-            <value>11</value>
-          </less-than>
-        </or>
-      </condition>
-      <binding>
-        <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
-          <value>0</value>
-      </binding>
-    </transition>
-  </state-machine>
-
-    <!-- Landing light Left + Right -->
-
-  <state-machine>
-    <state><name>on</name></state>
-    <state><name>off</name></state>
-    <transition>
-      <name>auto-on</name>
-      <source>off</source>
-      <target>on</target>
-      <condition>
-        <and>
-          <property>controls/lighting/landing-light</property>
-          <property>controls/lighting/landing-light[1]</property>
-          <greater-than>
-            <property>systems/electrical/right-main-bus-volts</property>
-            <value>10</value>
-          </greater-than>
-        </and>
-      </condition>
-      <binding>
-        <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-landing-light</property>
-          <value>1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
-          <value>1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light1-offset-deg</property>
-        <value>-5</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light2-offset-deg</property>
-        <value>5</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light3-offset-deg</property>
-        <value>2</value>
-      </binding>
-    </transition>
-    <transition>
-      <name>auto-off</name>
-      <source>on</source>
-      <target>off</target>
-      <condition>
-        <or>
-          <and>
-            <not>
-                <property>controls/lighting/landing-light</property>
-              </not>
-              <not>
-                <property>controls/lighting/landing-light[1]</property>
-              </not>
-          </and>
-          <less-than>
-            <property>systems/electrical/right-main-bus-volts</property>
-            <value>11</value>
-          </less-than>
-        </or>
-      </condition>
-      <binding>
-        <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
-          <value>0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light1-offset-deg</property>
-        <value>0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light2-offset-deg</property>
-        <value>0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light3-offset-deg</property>
+        <property>sim/rendering/als-landing-light</property>
         <value>0</value>
       </binding>
     </transition>
   </state-machine>
 
-    <!-- Taxi lights -->
+  <!-- Landing light right -->
 
   <state-machine>
     <state><name>on</name></state>
@@ -426,37 +273,61 @@
       <source>off</source>
       <target>on</target>
       <condition>
-        <and>
-          <property>controls/lighting/taxi-light</property>
-          <greater-than>
-            <property>systems/electrical/left-main-bus-volts</property>
-            <value>10</value>
-          </greater-than>
-        </and>
+        <property>controls/lighting/landing-light[1]</property> <!-- check switch on -->
       </condition>
       <binding>
         <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-landing-light</property>
-          <value>1</value>
+        <property>sim/rendering/als-landing-light</property>
+        <value>1</value>
+      </binding>
+    </transition>
+    <transition>
+      <name>auto-off</name>
+      <source>on</source>
+      <target>off</target>
+      <condition>
+        <not>
+          <property>controls/lighting/landing-light[1]</property> <!-- check switch off -->
+        </not>
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/rendering/als-landing-light</property>
+        <value>0</value>
+      </binding>
+    </transition>
+  </state-machine>
+
+  <!-- Taxi lights -->
+
+  <state-machine>
+    <state><name>on</name></state>
+    <state><name>off</name></state>
+    <transition>
+      <name>auto-on</name>
+      <source>off</source>
+      <target>on</target>
+      <condition>
+        <property>controls/lighting/taxi-light</property> <!-- verified by switch only -->
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/rendering/als-taxi-light</property>
+        <value>1</value>
       </binding>
       <binding>
         <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
-          <value>1</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light1-offset-deg</property>
+        <property>sim/rendering/als-secondary-lights/taxi-light1-offset-deg</property>
         <value>5</value>
       </binding>
       <binding>
         <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light2-offset-deg</property>
+        <property>sim/rendering/als-secondary-lights/taxi-light2-offset-deg</property>
         <value>-5</value>
       </binding>
       <binding>
         <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light3-offset-deg</property>
+        <property>sim/rendering/als-secondary-lights/taxi-light3-offset-deg</property>
         <value>2</value>
       </binding>
     </transition>
@@ -465,47 +336,62 @@
       <source>on</source>
       <target>off</target>
       <condition>
-        <or>
-          <and>
-            <not>
-              <property>controls/lighting/taxi-light</property>
-            </not>
-            <not>
-              <property>controls/lighting/landing-light</property>
-            </not>
-            <not>
-              <property>controls/lighting/landing-light[1]</property>
-            </not>
-          </and>
-          <less-than>
-            <property>systems/electrical/left-main-bus-volts</property>
-            <value>11</value>
-          </less-than>
-        </or>
+        <not>
+          <property>controls/lighting/taxi-light</property> <!-- check switch -->
+        </not>
       </condition>
       <binding>
         <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-landing-light</property>
-          <value>0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-          <property>sim/rendering/als-secondary-lights/use-alt-landing-light</property>
-          <value>0</value>
-      </binding>
-      <binding>
-        <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light1-offset-deg</property>
+        <property>sim/rendering/als-taxi-light</property>
         <value>0</value>
       </binding>
       <binding>
         <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light2-offset-deg</property>
+        <property>sim/rendering/als-secondary-lights/taxi-light1-offset-deg</property>
         <value>0</value>
       </binding>
       <binding>
         <command>property-assign</command>
-        <property>sim/rendering/als-secondary-lights/landing-light3-offset-deg</property>
+        <property>sim/rendering/als-secondary-lights/taxi-light2-offset-deg</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/rendering/als-secondary-lights/taxi-light3-offset-deg</property>
+        <value>0</value>
+      </binding>
+    </transition>
+  </state-machine>
+  
+  <!-- Logo Light -->
+  <state-machine>
+    <state><name>on</name></state>
+    <state><name>off</name></state>
+    <transition>
+      <name>auto-on</name>
+      <source>off</source>
+      <target>on</target>
+      <condition>
+        <property>controls/lighting/logo-light</property> <!-- check switch on -->
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/rendering/als-logo-light</property>
+        <value>1</value>
+      </binding>
+    </transition>
+    <transition>
+      <name>auto-off</name>
+      <source>on</source>
+      <target>off</target>
+      <condition>
+        <not>
+          <property>controls/lighting/logo-light</property> <!-- check switch off -->
+        </not>
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>sim/rendering/als-logo-light</property>
         <value>0</value>
       </binding>
     </transition>

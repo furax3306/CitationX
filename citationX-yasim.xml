@@ -75,11 +75,28 @@ Fuel 12938 lbs jet
     <flap0 start="0" end=".67" lift="1.5" drag="1.6"/>
     <flap1 start=".688" end=".858" lift="1.3" drag="1.4"/>
     <slat start=".2" end=".8" aoa="3" drag="1.0"/>
-    <spoiler start=".309" end=".48" lift="1.0" drag="6.0"/>
+
+	  <!-- ***********************************************************
+		Spoiler modification to fix innefective original spoiler
+		  - spoiler original : 
+		<spoiler start=".309" end=".48" lift="1.0" drag="6.0"/> 
+	Mofified : size(+), portance(-), drag(+)
+	     *********************************************************** --> 
+    <spoiler start=".30" end=".50" lift="0.65" drag="24.0"/>
+	<!-- *End* Spoler fix modification --> 	  
+    
     <control-input axis="/surface-positions/flap-pos-norm" control="FLAP0"/>
     <control-input axis="/surface-positions/aileron-pos-norm" control="FLAP1" split="true"/>
     <control-input axis="/surface-positions/slat-pos-norm" control="SLAT"/>
     <control-input axis="/surface-positions/speedbrake-pos-norm" control="SPOILER"/>
+	  
+	<!-- ***************************************************************
+		*Begin* Added flap and spoiler speed deployment and retract -->
+	<control-speed control="FLAP0" transition-time="3"/>
+	<control-speed control="SPOILER" transition-time="0.5"/>
+	<!-- *End* flap and spoiler speed deployment and retract 
+     *************************************************************** -->
+	  
   </wing>
 
   <hstab x="-8.562" y="0.15" z="2.98" length="4.85" chord="2.1"

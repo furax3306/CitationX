@@ -94,7 +94,9 @@
         </binding>
     </key>
 
-    <key n="119">
+	  <!-- Replacing "w" by "shift + w" allowing w to be used by walker -->
+     <!-- <key n="119"> -->
+   		<key n="87">
         <name>w</name>
         <desc>Charts Display</desc>
         <binding>

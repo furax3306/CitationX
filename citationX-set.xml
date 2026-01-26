@@ -7,10 +7,15 @@ Completed 2015-2021 C. Le Moigne (clm76), C-Thiriot (PATTEN).
 Additional changes 2025 vgaconnector
 ************************************************************************
 -->
-<PropertyList>
+<!-- <PropertyList > -->
+
+	<!-- *Begin* Walker inclusion in PropertyList -->
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
+	<!-- *End* Walker inclusion in PropertyList -->
+		
   <sim>
     <description>Cessna Citation X (Yasim)</description>
-    <author>Syd Adams (creator), C.Le Moigne (clm76), C.Thiriot (Patten), F-ORKI, Laurent (F5SLQ), Silveraire40, vgaconnector - Version 19/04/2025</author>
+    <author>Syd Adams (creator), C.Le Moigne (clm76), C.Thiriot (Patten), F-ORKI, Laurent (F5SLQ), Silveraire40, vgaconnector, F-URAX - Version 26/01/2026</author>
     <status>devel</status>
     <rating>
         <FDM type="int">4</FDM>
@@ -67,7 +72,31 @@ Additional changes 2025 vgaconnector
         <shadeless  type="bool" userarchive="y">0</shadeless>
 		    <nav1-visible type="bool" userarchive="y">1</nav1-visible>
 		    <nav2-visible type="bool" userarchive="y">1</nav2-visible>
+		
+		<!-- *Begin* Exit location for walker (longitudinal (x) and lateral (y)) -->	
+			<map>
+				<default_exit>
+					<x-offset-m type ="float">-1</x-offset-m>
+					<y-offset-m type ="float">-3</y-offset-m>
+				</default_exit>
+			</map>
+		
+		<!-- *End* Exit location for walker -->
+					
     </model>
+
+	  <!-- *Begin* Walker attributes, outfit and relative offset elevation exit location -->
+	
+    <walker>
+      <gender>0</gender>
+      <outfit>2</outfit>
+      <equipment>1</equipment>
+      <eyewear>1</eyewear>
+      <headgear>0</headgear>
+      <altitude-ft>-1.0</altitude-ft>
+    </walker>
+	
+	<!-- *End* Walker attributes outfit and relative offset elevation exit location -->
 
     <view n="0">
       <name>Pilot</name>

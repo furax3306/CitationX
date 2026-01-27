@@ -82,7 +82,7 @@ Fuel 12938 lbs jet
 		<spoiler start=".309" end=".48" lift="1.0" drag="6.0"/> 
 	Mofified : size(+), portance(-), drag(+)
 	     *********************************************************** --> 
-    <spoiler start=".30" end=".50" lift="0.65" drag="24.0"/>
+    <spoiler start=".30" end=".50" lift="0.65" drag="18.0"/>
 	<!-- *End* Spoler fix modification --> 	  
     
     <control-input axis="/surface-positions/flap-pos-norm" control="FLAP0"/>

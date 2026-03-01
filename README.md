@@ -16,9 +16,9 @@ Modded by F-URAX:
 
 Modifications :
 
-- Walker added (The walker "w" key work, for charts use "shift" + "w" instead)
-- Pushback added
-- Spoiler corrected
+- Walker added (The chart view "w" key is remapped for walker forward, so now for charts view use "shift" + "w" instead)
+- Pushback added - Pushback added (with "Forklift" model)
+- Spoiler corrected (original was not enough effective)
 
 Updated 01/03/2026
 

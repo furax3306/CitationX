@@ -92,8 +92,8 @@ Fuel 12938 lbs jet
 	  
 	<!-- ***************************************************************
 		*Begin* Added flap and spoiler speed deployment and retract -->
-	<control-speed control="FLAP0" transition-time="3"/>
-	<control-speed control="SPOILER" transition-time="0.5"/>
+	<control-speed control="FLAP0" transition-time="2.5"/>
+	<control-speed control="SPOILER" transition-time="0.2"/>
 	<!-- *End* flap and spoiler speed deployment and retract 
      *************************************************************** -->
 	  
@@ -211,6 +211,17 @@ Thrust Fuel flow(TSFC) 0.3222 kg/s, 0.3187 kg/s with winglets
       <control-speed control="THROTTLE" transition-time="5"/>
   </thruster>
 
+	  <!-- **** Add Pushback capability ****
+		with modification of (model).xml 
+		and data append to menu entries
+		***    begin of modification *** -->
+		
+	<thruster x="19.246"  y="0.00" z="-2.7" vx="1" vy="0" vz="0" thrust="2000">
+	<control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
+	</thruster>
+	
+	<!-- **** End of Pushback modifications *** -->	
+	
   <ballast x="-6.0" y="0.0" z="2.0" mass="-1000"/>
   <ballast x="-8.562" y="0" z="2.98" mass="-800"/>
   <ballast x="0.0" y="0" z="-0.5" mass="5000"/>

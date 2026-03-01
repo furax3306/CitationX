@@ -24,5 +24,5 @@ Updated 01/03/2026
 
 - Now walker view and walker orbit views are enabled by default
 - View automaticaly swith to walker view when you toggle walker outside
-- Exit map for walker improver : now walker exit near the cabin door
+- Exit map for walker improved : now walker exit near the cabin door
 

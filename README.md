@@ -19,3 +19,10 @@ Modifications :
 - Walker added (The walker "w" key work, for charts use "shift" + "w" instead)
 - Pushback added
 - Spoiler corrected
+
+Updated 01/03/2026
+
+- Now walker view and walker orbit views are enabled by default
+- View automaticaly swith to walker view when you toggle walker outside
+- Exit map for walker improver : now walker exit near the cabin door
+

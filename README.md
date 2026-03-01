@@ -14,6 +14,6 @@ Creators:
 
 Modifications :
 
-- Walker added
+- Walker added ("w" key work, for charts use "shift" + "w" instead)
 - Pushback added
 - Spoiler corrected

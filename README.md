@@ -16,6 +16,6 @@ Modded by F-URAX
 
 Modifications :
 
-- Walker added ("w" key work, for charts use "shift" + "w" instead)
+- Walker added (The walker "w" key work, for charts use "shift" + "w" instead)
 - Pushback added
 - Spoiler corrected

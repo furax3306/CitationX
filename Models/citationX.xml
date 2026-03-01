@@ -27,6 +27,24 @@
   </nasal>
 -->
 
+ <!-- **** Add Pushback capability ****
+	with modification of (model)-yasim.xml 
+		and data append to menu entries
+		***    begin of modification *** -->
+
+<model>
+  <name>Pushback</name>
+  <path>Models/Airport/Pushback/Forklift.xml</path>
+  <offsets>
+   <x-m>-8.42</x-m>
+   <y-m>0</y-m>
+   <z-m>-2.12</z-m>
+  </offsets>
+ </model>
+ 
+ <!-- **** End of Pushback modifications *** -->
+
+
   <animation>
     <type>material</type>
     <object-name>Engine.L</object-name>

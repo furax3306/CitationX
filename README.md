@@ -12,7 +12,7 @@ Creators:
 * vgaconnector
   
 
-Modded by F-URAX
+Modded by F-URAX:
 
 Modifications :
 

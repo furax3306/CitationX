@@ -10,3 +10,8 @@ Creators:
 * Laurent - F5SLQ
 * Silveraire40
 * vgaconnector
+
+
+- Walker added
+- Pushback added
+- Spoiler corrected

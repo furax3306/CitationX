@@ -26,3 +26,12 @@ Updated 01/03/2026
 - View automaticaly swith to walker view when you toggle walker outside
 - Exit map for walker improved : now walker exit near the cabin door
 
+Updated 07/03/2026
+
+- Many views added :
+    - FMS
+    - Radio
+    - APU
+    - Left Panel
+    - Trottles and pedestal
+    - Flight attendant at door view (named PNC, for Personnel Navigant Commercial in french)

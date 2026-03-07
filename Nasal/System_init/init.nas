@@ -431,9 +431,9 @@ props.globals.initNode("/services/fuel-truck/request-lbs", 0, "DOUBLE");
 
 ### Transponder ###
 for(var n=0;n<2;n+=1) {
-  props.globals.initNode("instrumentation/transponder/unit["~n~"]/id-code",7777,"INT");
-  props.globals.initNode("instrumentation/transponder/unit["~n~"]/id-code[1]",77,"INT");
-  props.globals.initNode("instrumentation/transponder/unit["~n~"]/id-code[2]",77,"INT");
+  props.globals.initNode("instrumentation/transponder/unit["~n~"]/id-code",7000,"INT");
+  props.globals.initNode("instrumentation/transponder/unit["~n~"]/id-code[1]",70,"INT");
+  props.globals.initNode("instrumentation/transponder/unit["~n~"]/id-code[2]",70,"INT");
   props.globals.initNode("instrumentation/transponder/unit["~n~"]/display-mode","STANDBY");
   props.globals.initNode("instrumentation/transponder/unit["~n~"]/knob-mode",1,"INT");
 }

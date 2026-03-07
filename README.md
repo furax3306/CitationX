@@ -36,3 +36,8 @@ Updated 07/03/2026
     - Left Panel
     - Trottles and pedestal
     - Flight attendant at door view (named PNC, for Personnel Navigant Commercial in french)
+
+Updated 08/03/26
+
+- Inappropriate default squawk code (7777) corrected, now displaying code (7000) by default
+

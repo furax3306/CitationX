@@ -16,28 +16,4 @@ Modded by F-URAX:
 
 Modifications :
 
-- Walker added (The chart view "w" key is remapped for walker forward, so now for charts view use "shift" + "w" instead)
-- Pushback added - Pushback added (with "Forklift" model)
-- Spoiler corrected (original was not enough effective)
-
-Updated 01/03/2026
-
-- Now walker view and walker orbit views are enabled by default
-- View automaticaly swith to walker view when you toggle walker outside
-- Exit map for walker improved : now walker exit near the cabin door
-
-Updated 07/03/2026
-
-- Many views added :
-  
-    - FMS
-    - Radio
-    - APU
-    - Left Panel
-    - Trottles and pedestal
-    - Flight attendant at door view (named PNC, for Personnel Navigant Commercial in french)
-
-Updated 08/03/26
-
-- Inappropriate default squawk code (7777) corrected, now displaying code (7000) by default
-
+(https://github.com/furax3306/CitationX/blob/CitationX/Roadmap.md)

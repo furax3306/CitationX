@@ -11,14 +11,14 @@ Creators:
 * Silveraire40
 * vgaconnector
   
-
+---
 Modded by F-URAX:
+---
 
 Modifications :
 
 (https://github.com/furax3306/CitationX/blob/CitationX/Roadmap.md)
 
 
-TODO :
-
-(coming soon)
+Others modifications are on the way,
+and released only when ready and stable (no nightly build)

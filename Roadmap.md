@@ -8,6 +8,9 @@ ROADMAP
 - Walker added (The chart view "w" key is remapped for walker forward, so now for charts view use "shift" + "w" instead)
 - Pushback added - Pushback added (with "Forklift" model)
 - Spoiler corrected (original was not enough effective)
+- Nasal mods (squawk and nav config)
+
+See details below
 
 ---
 

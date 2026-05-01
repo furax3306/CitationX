@@ -1,4 +1,7 @@
-# Cessna Citation X
+# Citation X (FlightGear) - Enhanced Version
+
+Modified version of the Cessna Citation X for FlightGear.
+
 ---
 A highly advanced simulation of the Cessna Citation X for the FlightGear flight simulator.
 ---
@@ -19,6 +22,29 @@ Modifications :
 
 (https://github.com/furax3306/CitationX/blob/CitationX/Roadmap.md)
 
+## Features
+- Dual jetway compatibility (legacy + new system)
+- OpenStreetMap / OpenTopoMap integration (Stamen replacement)
+- Improved MFD map system
+- Various system and cockpit enhancements
+- Walker
+- Pushback
+- MFD map
 
+## Installation
+Copy the aircraft folder into your FlightGear/Aircraft directory.
+
+## Requirements
+- FlightGear >= 2018.3.0 (recommended newer)
+
+## Notes
+This version maintains backward compatibility with existing systems.
+
+## License
+GPL v2 (same as FlightGear)
 Others modifications are on the way,
 and released only when ready and stable (no nightly build)
+
+
+
+

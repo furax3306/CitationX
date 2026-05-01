@@ -20,6 +20,10 @@ Modded by F-URAX:
 
 Modifications :
 
+(https://github.com/furax/CitationX/blob/CitationX/Changelog.md)
+
+and Roadmap :
+
 (https://github.com/furax3306/CitationX/blob/CitationX/Roadmap.md)
 
 ## Features

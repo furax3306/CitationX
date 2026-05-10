@@ -20,10 +20,10 @@
           <and>
           <less-than>
               <property>velocities/airspeed-kt</property>
-              <value>40</value>
+              <value>15</value> <!-- value : 40 -->
           </less-than>
-          <property>systems/electrical/outputs/cabin-door-monitor</property>
-          </and>
+         <!-- <property>systems/electrical/outputs/cabin-door-monitor</property>
+          </and> --><!-- Useless on a manual door (monitor is only for door status information) -->
         </condition>
         <command>property-toggle</command>
         <property>controls/cabin-door/open</property>

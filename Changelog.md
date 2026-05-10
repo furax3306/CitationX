@@ -14,6 +14,11 @@ ROADMAP
 See details below
 
 ---
+Updated 10/05/26
+
+- Cabin door can be opened / closed without battery switched on
+
+___________________________________________________________________________________
 
 Updated 21/03/26
 

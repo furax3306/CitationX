@@ -1,6 +1,6 @@
 # Citation X (FlightGear) - Enhanced Version
 
-Modified version of the Cessna Citation X for FlightGear.
+Modified version of the Cessna Citation X for FlightGear 2020.
 
 ---
 A highly advanced simulation of the Cessna Citation X for the FlightGear flight simulator.

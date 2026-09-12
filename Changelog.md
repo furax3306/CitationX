@@ -14,9 +14,17 @@ ROADMAP
 See details below
 
 ---
-Updated 10/05/26
+Updated 12/09/26
 
 - Cabin door can be opened / closed without battery switched on
+
+___________________________________________________________________________________
+
+---
+Updated 10/05/26
+
+- FMS Correction about the TOD insertion, bug resolved and it's now possible to expect a TOD
+  in hight flight level condition with multiples WPT in arrival and STAR
 
 ___________________________________________________________________________________
 

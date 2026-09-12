@@ -20,11 +20,11 @@ Modded by F-URAX:
 
 Modifications :
 
-(https://github.com/furax/CitationX/blob/CitationX/Changelog.md)
+(https://github.com/furax3306/CitationX_fgfs_2020/blob/CitationX_2020/Changelog.md)
 
 and Roadmap :
 
-(https://github.com/furax3306/CitationX/blob/CitationX/Roadmap.md)
+(https://github.com/furax3306/CitationX/blob/CitationX_2020/Roadmap.md)
 
 ## Features
 - Dual jetway compatibility (legacy + new system)
